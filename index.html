@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>accessible-form-UI</title>
+</head>
+<body>
+    <div class="Container ubuntu-regular">
+        <div class="content">
+            <form action="">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="What should we call you?">
+                <label for="email" style="color: red;">Email</label>
+                <input class="color" type="email" style="border-color: red;" id="email" placeholder="john@doe.com">
+                <div class="password-field">
+                    <label for="password">Enter Password</label>
+                    <input type="password" id="password" placeholder="xxxxxxxx">
+                    <i class="fa fa-eye" id="togglePassword"></i>
+                    <div class="confirmPassword">
+                        <label for="password">Confirm Password</label>
+                        <input type="password" id="password" placeholder="xxxxxxxx">
+                        <i class="fa fa-eyes" id="togglePassword"></i>
+                    </div>                    
+                </div>
+                <input class="button" type="button" value="Update Profile">
+            </form>
+        </div>
+        <div class="listContainer">   
+            <div class="processContainer"> 
+                <div class="profileText">Profile Completeness</div>
+                <div class="progressCircle">65%</div>
+            </div>
+            <div class="checkColor">
+                <ul class="checklist">
+                    <li><strike>Create Account</strike></li>
+                    <li><strike> Update Roadmap Progress</strike></li>
+                    <li><strike>Setup Public Profile</strike></li>
+                    <li>Complete your first project</li>
+                    <li>Invite your Friends</li>
+                </ul> 
+            </div>     
+        </div>
+    </div>
+</body>
+</html>
