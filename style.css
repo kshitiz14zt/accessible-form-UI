@@ -60,14 +60,14 @@ label{
     font-size: 18px;
 }
 .processContainer {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
 }
 .profileText{
-    font-size: 20px;
+    font-size: 24px;
     margin-top: 10px;
+    margin-left: 28px;
+    text-align: center;
 }
 .progressCircle {
     position: relative;
@@ -80,6 +80,7 @@ label{
     padding-top: 20px;
     font-size: 20px;
     margin-bottom: 14px;
+    margin-right: 22px;
 }
 strike{
     color: gray;
@@ -87,6 +88,7 @@ strike{
 .checkColor{
     background-color: rgb(211, 211, 211);
     border-radius: 28px;
+    margin: 14px;
 }
 ul.checklist{
     list-style: none;
@@ -116,5 +118,14 @@ ul.checklist{
     ul.checklist{
         font-size: 26px;
         line-height: 52px;
+    }
+    .profileText{
+        margin-left: 16px;
+    }
+    .progressCircle{
+        margin-right: 0;
+    }
+    .processContainer{
+
     }
 }
