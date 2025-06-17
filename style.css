@@ -6,7 +6,6 @@
 .password {
     border-radius: 10px; 
     position: relative; 
-    /* box-shadow: 0 0 12px 0px rgba(1, 1, 1, 0.25);  */
 } 
 .password-toggle{
     width: 34px;
@@ -27,11 +26,11 @@
     top: 26px;
 }
 .password-input{ 
-    -webkit-text-security: none; 
+    -webkit-text-security: disc; 
     padding-left: 10px;
 }
 .password-toggle:checked ~ .password-input{
-    -webkit-text-security:disc;
+    -webkit-text-security:none;
 }
 .password-toggle:checked ~ .toggle-eye.close{
     opacity: 0;    
