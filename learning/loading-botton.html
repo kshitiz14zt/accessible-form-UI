@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:  0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color:rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .circle-container{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative; 
+            border-radius: 100%;
+        }
+        .inner-circle{
+            width: 80px;
+            height: 80px;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            /* top: 0px;
+            left: 0px; */
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(0, 0, 0);
+            font-size: 19px;
+        }
+        .top-semicircle{
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-radius: 100px 100px 0 0;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        /* .bottom-semicircle{
+            width: 100px;
+            height: 50px;
+            background-color: white;
+            border-radius: 0 0 100px 100px;
+            position: relative;
+            overflow: hidden;
+        } */
+        .rectangle1 {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(0, 0, 0);
+            position: absolute;
+            top: 50px;
+            transform-origin: 50% 0;
+            animation: animation1 3s forwards linear;
+            animation-iteration-count: infinite;  
+        }
+        /* .rectangle2 {
+            height: 50px; 
+            width: 100px;
+            background-color: rgb(0, 0, 0);
+            position: absolute;
+            top: -50px;
+            transform-origin: 50% 100%;
+            animation: animation2 3s forwards linear ;
+            animation-delay: 3s;
+
+        } */
+        @keyframes animation1 {
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        /* @keyframes animation2 {
+            to{
+                transform: rotate(180deg);
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="circle-container">
+        <div class="top-semicircle">
+            <div class="rectangle1"></div>
+        </div>
+        <!-- <div class="bottom-semicircle">
+            <div class="rectangle2"></div>
+        </div> -->
+    </div>
+    <div class="inner-circle">100%</div>
+</body>
+</html>
