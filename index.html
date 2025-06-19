@@ -19,16 +19,8 @@
                 <label for="name">Full Name</label>
                 <input type="text"  placeholder="What should we call you?">
                 <label for="email">Email</label>
-                <input class="color" type="email" placeholder="john@doe.com" title="Enter  the correct formate of email">
-                <!-- <input
-                id="email"
-                type="email"
-                size="64"
-                maxlength="64"
-                required
-                placeholder="username@beststartupever.com"
-                pattern=".+@beststartupever\.com"
-                title="Please provide only a Best Startup Ever corporate email address" /> -->
+                <input class="color" type="email" placeholder="john@doe.com" pattern=".+@gmail\.com"title="Enter  the correct formate of email">
+                <!-- <input id="email" type="email" size="64" maxlength="64" required placeholder="username@beststartupever.com" pattern=".+@beststartupever\.com" title="Please provide only a Best Startup Ever corporate email address" /> -->
                 <div class="password-field">
                     <label for="password">Enter Password</label>
 
@@ -40,7 +32,7 @@
                         <div class="toggle-eye close">
                             <ion-icon name="eye-off"></ion-icon>    
                         </div>
-                        <input type="text" class="password-input" placeholder="xxxxxxxx">
+                        <input type="text" maxlength="11" class="password-input" placeholder="xxxxxxxxxxx">
                     </div>
                     <div class="confirmPassword">
                         <label for="password">Confirm Password</label>
@@ -53,7 +45,7 @@
                             <div class="toggle-eye close">
                                 <ion-icon name="eye-off"></ion-icon>   
                             </div>
-                            <input type="text" class="password-input" placeholder="xxxxxxxx">
+                            <input type="text" maxlength="11" class="password-input" placeholder="xxxxxxxxxxx">
                         </div>
                     </div>                    
                 </div>

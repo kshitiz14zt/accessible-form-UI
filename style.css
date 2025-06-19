@@ -3,14 +3,6 @@
     margin: 0;
     box-sizing: content-box;
 }
-body{
-    /* background-color:rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
-    /* height: 100vh; */
-}
 .circle-container{
     width: 12em;
     height: 12em;
@@ -133,7 +125,6 @@ input{
     font-size: 22px;
     border: 2px solid;
     padding-left: 10px;
-    
 }
 input::placeholder{
     font-size: 28px;
@@ -176,25 +167,11 @@ label{
     height:2.8em;
     font-size: 28px;
 }
-.processContainer {
-    align-items: center;
-    margin-bottom: 1rem;
-}
 .profileText{
     font-size: 24px;
     margin-top: 10px;
     margin-left: 28px;
     text-align: center;
-}
-.progressCircle {
-    width: 43%;
-    height: 3em;
-    border-radius: 90px;
-    border: 4px solid black;
-    text-align: center;
-    padding-top: 17%;
-    font-size: 34px;
-    margin: 32px auto 0 4em;
 }
 strike{
     color: #b6b3b3;
@@ -263,17 +240,9 @@ ul.checklist{
         display: block;
     }
     .checkColor{
-        width:70%;
-        margin-left: 4.6em;
+        width: 79%;
+        margin-left: 2.6em;
         margin-bottom: 32px;
-    }
-    .progressCircle{
-        width: 49%;
-        height: 4em;
-        padding-top: 18%;
-        border-radius: 50%;
-        margin-left: 3.4em;
-        margin-top: 0;
     }
     .profileText{
         margin-left: 0;
@@ -281,19 +250,24 @@ ul.checklist{
         margin-bottom: 1em;
     }
     ul.checklist{
-        font-size: 18px;
+        font-size: 17px;
         line-height: 34px;
     }
     .inner-circle{
         transform: translate(-48%, -47%);
     }
     .circle-container{
-        margin-left: 8em;
-        margin-bottom: 3em;
+        margin: auto  auto 3em;
+    }
+    ::placeholder{
+        font-size: 24px !important;
+    }
+    label{
+        font-size: 24px !important;
     }
 }
 @media screen and (min-width:768px) and (max-width:1023px) {
-    .Container{
+    /* .Container{
         padding: 26px 40px 40px;
         gap: 8px;
     }
@@ -323,5 +297,37 @@ ul.checklist{
     }
     .inner-circle{
         transform: translate(-48%, -48%);
+    } */
+    .content{
+        width: 90%;
+        padding: 2em;
+    }
+    .Container{
+        width: 99%;
+        display: block;
+    }
+    .checkColor{
+        width: 70%;
+        margin-left: 7.6em;
+        margin-bottom: 32px;
+        border-radius: 48px;
+    }
+    .profileText{
+        margin-left: 0;
+        font-size: 46px;
+        margin-bottom: 1em;
+    }
+    ul.checklist{
+        font-size: 26px;
+        line-height: 46px;
+    }
+    .inner-circle{
+        transform: translate(-48%, -47%);
+    }
+    .circle-container{
+        margin: auto  auto 3em;
+    }
+    input{
+        height: 3em;
     }
 }
