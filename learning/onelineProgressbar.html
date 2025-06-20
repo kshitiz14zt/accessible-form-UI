@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <title>accessible-form-UI</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+form{
+    width: 100%;
+}
+.horizentalBar{
+    /* width: 600px; */
+    height: 20px;
+    /* border: 2px solid black; */
+    margin-left: 6em;
+    margin-bottom: 2em;
+    border-radius: 18px;
+    background: #ddd;
+    overflow: hidden;
+}
+.fill{
+    height: 100%;
+    width: 0%;
+    background: #000000;;
+    transition: width 0.2s;
+}
+input:valid:nth-of-type(1) ~ .horizentalBar .fill {
+      width: 25%;
+    }
+    input:valid:nth-of-type(1):not(:placeholder-shown)
+    ~ input:valid:nth-of-type(2) ~ .horizentalBar .fill {
+      width: 50%;
+    }
+    input:valid:nth-of-type(3) ~ .horizentalBar .fill {
+      width: 75% ;
+    }
+    input:valid:nth-of-type(1):not(:placeholder-shown)~
+    input:valid:nth-of-type(2):not(:placeholder-shown)~
+    input:valid:nth-of-type(3):not(:placholder-shown)~
+    input:valid:nth-of-type(4) ~ .horizentalBar .fill {
+      width: 100%;
+    }
+.password {
+    border-radius: 10px; 
+    position: relative; 
+} 
+.password-toggle{
+    width: 34px;
+    height: 36px;
+    position: absolute;
+    right: 14px;
+    z-index: 1;
+    appearance: none;
+    cursor: pointer;
+    top: 2px;
+    border: 1px solid transparent;
+    right: -2px;
+}
+.toggle-eye{
+    position: absolute;
+    right: 0;
+    font-size: 34px;
+    top: 16px;
+}
+.password-input{ 
+    -webkit-text-security: disc; 
+    padding-left: 10px;
+}
+.password-toggle:checked ~ .password-input{
+    -webkit-text-security:none;
+}
+.password-toggle:checked ~ .toggle-eye.close{
+    opacity: 0;    
+}
+.Container{
+    border: 2px solid black;
+    margin: 4px;
+    border-radius: 28px;
+    width: 100%;
+    display: flex;
+}
+.content{
+    padding: 12px;
+    width: 50%;
+}
+input{
+    width: 100%;
+    height: 2.8em;
+    margin-top: 12px;
+    border-radius: 16px;
+    font-family: "Ubuntu", sans-serif;
+    margin-bottom: 26px;
+    font-size: 22px;
+    border: 2px solid;
+    padding-left: 10px;
+    display: block;
+}
+input::placeholder{
+    font-size: 28px;
+    color: #c1bebe;
+    /* padding-left: 16px; */
+}
+label{
+    font-size: 28px;
+    display: block;
+}
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.password-field {
+    position: relative;
+}
+.fa-eye {
+    position: absolute;
+    right: 10px;
+    top: 25%;
+    cursor: pointer;
+}
+.confirmPassword {
+    position: relative;
+}
+.fa-eyes {
+    position: absolute;
+    right: 10px;
+    top: 56%;
+    cursor: pointer; 
+}
+.fa-eyes:before {
+    content: "\f06e";
+}
+.button{
+    background-color: black;
+    color: aliceblue;
+    height:2.8em;
+    font-size: 28px;
+}
+.profileText{
+    font-size: 24px;
+    margin-top: 10px;
+    margin-left: 28px;
+    text-align: center;
+}
+strike{
+    color: #b6b3b3;
+}
+.checkColor{
+    background-color:#ebebeb;
+    border-radius: 28px;
+    margin-left: 4.6em;
+}
+ul.checklist{
+    list-style: none;
+    line-height: 32px;
+    padding: 34px;
+}
+
+.button:hover{
+    background: lightblue;
+    color: red;
+    border: 1px solid black;
+    cursor: pointer;
+}
+@media screen and (min-width:1024px) {
+    .Container{
+        display: flex;
+        padding: 44px 68px 30px 44px;
+        max-width: 820px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin: 80px auto;
+        gap: 8px;
+    }
+    .content{
+        width: 50%;
+    }
+    .listContainer{
+        width: 50%;
+    } 
+    .checkColor{
+        width:86%;
+        height: 53%;
+    }
+    ul.checklist{
+        font-size: 22px;
+        line-height: 45px;
+        margin-top: 28px;
+    }
+    .profileText{
+        margin-left: 3em;
+        margin-top: 1em;
+        font-size: 30px;
+    }
+    .progressCircle{
+        margin-left: 5em;
+    }
+    .button{
+        width: 95%;
+    }
+}
+@media screen and (max-width:767px) {
+    .content{
+        width: 82%;
+        padding: 2em;
+    }
+    .Container{
+        margin: 0;
+        width: 99%;
+        display: block;
+    }
+    .checkColor{
+        width: 79%;
+        margin-left: 2.6em;
+        margin-bottom: 32px;
+    }
+    .profileText{
+        margin-left: 0;
+        font-size: 30px;
+        margin-bottom: 1em;
+    }
+    ul.checklist{
+        font-size: 17px;
+        line-height: 34px;
+    }
+    .inner-circle{
+        transform: translate(-48%, -47%);
+    }
+    .circle-container{
+        margin: auto  auto 3em;
+    }
+    ::placeholder{
+        font-size: 24px !important;
+    }
+    label{
+        font-size: 24px !important;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .content{
+        width: 90%;
+        padding: 2em;
+    }
+    .Container{
+        width: 99%;
+        display: block;
+    }
+    .checkColor{
+        width: 70%;
+        margin-left: 7.6em;
+        margin-bottom: 32px;
+        border-radius: 48px;
+    }
+    .profileText{
+        margin-left: 0;
+        font-size: 46px;
+        margin-bottom: 1em;
+    }
+    ul.checklist{
+        font-size: 26px;
+        line-height: 46px;
+    }
+    .inner-circle{
+        transform: translate(-48%, -47%);
+    }
+    .circle-container{
+        margin: auto  auto 3em;
+    }
+    input{
+        height: 3em;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="Container ubuntu-regular">
+        <div class="content">
+            <form action="">
+                <label for="name">Full Name</label>
+                <input class="fillBar" type="text"  placeholder="What should we call you?" required>
+                <label for="email">Email</label>
+                <input  class="color fillBar" type="email" placeholder="john@doe.com" pattern=".+@gmail\.com"title="Enter  the correct formate of email"  required>
+                <!-- <input id="email" type="email" size="64" maxlength="64" required placeholder="username@beststartupever.com" pattern=".+@beststartupever\.com" title="Please provide only a Best Startup Ever corporate email address" /> -->
+                <div class="password-field">
+                    <label for="password">Enter Password</label>
+                    <div class="password">
+                        <input type="checkbox" class="password-toggle">
+                        <div class="toggle-eye open">
+                            <ion-icon name="eye"></ion-icon>
+                        </div>
+                        <div class="toggle-eye close">
+                            <ion-icon name="eye-off"></ion-icon>    
+                        </div>
+                        <input type="text" class="password-input fillBar" pattern=".+@123" placeholder="xxxxxxxxxxx" required>
+                    </div>
+                    <div class="confirmPassword">
+                        <label for="password">Confirm Password</label>
+                        <!-- <input type="password"  placeholder="xxxxxxxx"> -->
+                        <div class="password">
+                            <input type="checkbox" class="password-toggle" >
+                            <div class="toggle-eye open">
+                                <ion-icon name="eye"></ion-icon>
+                            </div>
+                            <div class="toggle-eye close">
+                                <ion-icon name="eye-off"></ion-icon>   
+                            </div>
+                            <input type="text" class="password-input fillBar" pattern=".+@123" placeholder="xxxxxxxxxxx" required>
+                        </div>
+                    </div>                    
+                </div>
+                <input class="button" type="submit" value="Update Profile">
+                     <div class="horizentalBar">
+                        <div class="fill"></div>
+                     </div>
+            </form>  
+        </div>
+        <div class="listContainer">   
+            <div class="checkColor">
+                <ul class="checklist">
+                    <li><strike>Create Account</strike></li>
+                    <li><strike> Update Roadmap Progress</strike></li>
+                    <li><strike>Setup Public Profile</strike></li>
+                    <li>Complete your first project</li>
+                    <li>Invite your Friends</li>
+                </ul> 
+            </div>     
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+body {
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #222;
+    display: grid;
+    place-items: center;
+}
+@property --progress{
+    syntax: '<number>';
+    initial-value: 0;
+    inherits: false;
+}
+.circular_progress {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    /* background-color: conic-graident(crimson 50deg, #eee 0deg); */
+    background-image: conic-gradient(var(--clr) calc(var(--progress) * 3.6deg),#fff 0deg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: progressAnim 2s forwards;
+}
+.circular_progress::before{
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    background-color: #222;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+.circular_progress span{
+    font-size: 3em;
+    color: #fff;
+    z-index: 1;
+
+}
+@keyframes progressAnim {
+    0%{
+        --progress: 0;
+    }
+    25%{
+        --progress: var(--value);
+    }
+    50%{
+        --progress: var(--value);
+    }
+    75%{
+        --progress: var(--value);
+    }
+    100%{
+        --progress: var(--value);
+    }
+}
