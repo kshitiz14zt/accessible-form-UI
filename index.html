@@ -17,12 +17,13 @@
         <div class="content">
             <form action="">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="What should we call you?" required>
+                <input type="text"  placeholder="What should we call you?" required>
                 <label for="email">Email</label>
-                <input class="color" type="email" id="email" placeholder="john@doe.com" pattern=".+@gmail\.com"title="Enter  the correct formate of email" required>
+                <input class="color" type="email" placeholder="john@doe.com" pattern=".+@gmail\.com"title="Enter  the correct formate of email" required>
                 <!-- <input id="email" type="email" size="64" maxlength="64" required placeholder="username@beststartupever.com" pattern=".+@beststartupever\.com" title="Please provide only a Best Startup Ever corporate email address" /> -->
                 <div class="password-field">
                     <label for="password">Enter Password</label>
+
                     <div class="password">
                         <input type="checkbox" class="password-toggle">
                         <div class="toggle-eye open">
@@ -31,7 +32,7 @@
                         <div class="toggle-eye close">
                             <ion-icon name="eye-off"></ion-icon>    
                         </div>
-                        <input type="text" id="password" maxlength="11" class="password-input" placeholder="xxxxxxxxxxx" required>
+                        <input type="text" maxlength="11" class="password-input" placeholder="xxxxxxxxxxx" required>
                     </div>
                     <div class="confirmPassword">
                         <label for="password">Confirm Password</label>
@@ -44,7 +45,7 @@
                             <div class="toggle-eye close">
                                 <ion-icon name="eye-off"></ion-icon>   
                             </div>
-                            <input type="text" id="confirm-password" maxlength="11" class="password-input" placeholder="xxxxxxxxxxx" required>
+                            <input type="text" maxlength="11" class="password-input" placeholder="xxxxxxxxxxx" required>
                         </div>
                     </div>                    
                 </div>
@@ -56,10 +57,14 @@
                 <div class="progressCircle">65%</div>
                 <div class="profileText">Profile Completeness</div>
             </div> -->
-            <div class="progress-bar">
-                <div class="progress">
-                    <span class="progress-text"></span>
+            <div class="circle-container">
+                <div class="top-semicircle">
+                    <div class="rectangle1"></div>
                 </div>
+                <div class="bottom-semicircle">
+                    <div class="rectangle2"></div>
+                </div>
+                <div class="inner-circle">100%</div>
             </div>
             <div class="profileText">Profile Completeness</div>
             <div class="checkColor">
