@@ -36,20 +36,16 @@ form{
     background: #000000;;
     transition: width 0.2s;
 }
-input:valid:nth-of-type(1) ~ .horizentalBar .fill {
+    input:valid:nth-of-type(1) ~ .horizentalBar .fill {
       width: 25%;
     }
-    input:valid:nth-of-type(1):not(:placeholder-shown)
-    ~ input:valid:nth-of-type(2) ~ .horizentalBar .fill {
+    input:valid:nth-of-type(2) ~ .horizentalBar .fill {
       width: 50%;
     }
     input:valid:nth-of-type(3) ~ .horizentalBar .fill {
       width: 75% ;
     }
-    input:valid:nth-of-type(1):not(:placeholder-shown)~
-    input:valid:nth-of-type(2):not(:placeholder-shown)~
-    input:valid:nth-of-type(3):not(:placholder-shown)~
-    input:valid:nth-of-type(4) ~ .horizentalBar .fill {
+    input :valid:nth-of-type(4) ~ .horizentalBar .fill {
       width: 100%;
     }
 .password {
@@ -210,88 +206,16 @@ ul.checklist{
         width: 95%;
     }
 }
-@media screen and (max-width:767px) {
-    .content{
-        width: 82%;
-        padding: 2em;
-    }
-    .Container{
-        margin: 0;
-        width: 99%;
-        display: block;
-    }
-    .checkColor{
-        width: 79%;
-        margin-left: 2.6em;
-        margin-bottom: 32px;
-    }
-    .profileText{
-        margin-left: 0;
-        font-size: 30px;
-        margin-bottom: 1em;
-    }
-    ul.checklist{
-        font-size: 17px;
-        line-height: 34px;
-    }
-    .inner-circle{
-        transform: translate(-48%, -47%);
-    }
-    .circle-container{
-        margin: auto  auto 3em;
-    }
-    ::placeholder{
-        font-size: 24px !important;
-    }
-    label{
-        font-size: 24px !important;
-    }
-}
-@media screen and (min-width:768px) and (max-width:1023px) {
-    .content{
-        width: 90%;
-        padding: 2em;
-    }
-    .Container{
-        width: 99%;
-        display: block;
-    }
-    .checkColor{
-        width: 70%;
-        margin-left: 7.6em;
-        margin-bottom: 32px;
-        border-radius: 48px;
-    }
-    .profileText{
-        margin-left: 0;
-        font-size: 46px;
-        margin-bottom: 1em;
-    }
-    ul.checklist{
-        font-size: 26px;
-        line-height: 46px;
-    }
-    .inner-circle{
-        transform: translate(-48%, -47%);
-    }
-    .circle-container{
-        margin: auto  auto 3em;
-    }
-    input{
-        height: 3em;
-    }
-}
     </style>
 </head>
 <body>
     <div class="Container ubuntu-regular">
         <div class="content">
             <form action="">
-                <label for="name">Full Name</label>
+                <!-- <label for="name">Full Name</label>
                 <input class="fillBar" type="text"  placeholder="What should we call you?" required>
                 <label for="email">Email</label>
                 <input  class="color fillBar" type="email" placeholder="john@doe.com" pattern=".+@gmail\.com"title="Enter  the correct formate of email"  required>
-                <!-- <input id="email" type="email" size="64" maxlength="64" required placeholder="username@beststartupever.com" pattern=".+@beststartupever\.com" title="Please provide only a Best Startup Ever corporate email address" /> -->
                 <div class="password-field">
                     <label for="password">Enter Password</label>
                     <div class="password">
@@ -306,7 +230,6 @@ ul.checklist{
                     </div>
                     <div class="confirmPassword">
                         <label for="password">Confirm Password</label>
-                        <!-- <input type="password"  placeholder="xxxxxxxx"> -->
                         <div class="password">
                             <input type="checkbox" class="password-toggle" >
                             <div class="toggle-eye open">
@@ -322,7 +245,18 @@ ul.checklist{
                 <input class="button" type="submit" value="Update Profile">
                      <div class="horizentalBar">
                         <div class="fill"></div>
-                     </div>
+                     </div> -->
+                     <label for="name">Name</label>
+                     <input type="text" required>
+                     <label for="email">Email</label>
+                     <input type="email">
+                     <label for="Password">Password</label>
+                     <input type="password">
+                     <label for="confirmPassword">Confirm Password</label>
+                     <input type="password">
+                     <input class="button" type="submit" value="Update Profile">
+                     <div class="horizentalBar">
+                        <div class="fill"></div>
             </form>  
         </div>
         <div class="listContainer">   
