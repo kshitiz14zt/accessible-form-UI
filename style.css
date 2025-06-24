@@ -15,7 +15,7 @@
     z-index: 1;
     appearance: none;
     cursor: pointer;
-    top: 16px;
+    top: 22px;
     border: 1px solid transparent;
     right: -2px;
 }
@@ -23,7 +23,7 @@
     position: absolute;
     right: 0;
     font-size: 34px;
-    top: 28px;
+    top: 36px;
 }
 .password-input{ 
     -webkit-text-security: disc; 
@@ -53,14 +53,13 @@ input{
     border-radius: 16px;
     font-family: "Ubuntu", sans-serif;
     margin-bottom: 26px;
-    font-size: 22px;
+    font-size: 28px;
     border: 2px solid;
     padding-left: 10px;
 }
 input::placeholder{
     font-size: 28px;
     color: #c1bebe;
-    /* padding-left: 16px; */
 }
 label{
     font-size: 28px;
@@ -234,7 +233,7 @@ ul.checklist{
     }
     .button{
         width: 95%;
-    }
+    }   
 }
 @media screen and (max-width:767px) {
     .content{
@@ -273,6 +272,15 @@ ul.checklist{
     label{
         font-size: 24px !important;
     }
+    input{
+        font-size: 22px;
+    }
+    .password-toggle{
+        top: 18px;
+    }
+    .toggle-eye{
+        top: 26px;
+    }
 }
 @media screen and (min-width:768px) and (max-width:1023px) {
     .content{
@@ -282,6 +290,7 @@ ul.checklist{
     .Container{
         width: 99%;
         display: block;
+        border: 0;
     }
     .checkColor{
         width: 70%;
